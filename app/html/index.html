@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- application css -->
+    <link media="screen" href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="unselectable">
+
+    <div class="">
+    </div>
+    <!-- qimessaging & jquery stuff -->
+    <script src="libs/qimessaging/1.0/jquery.min.js"></script>
+    <script src="libs/qimessaging/1.0/qimessaging.js"></script>
+    <script src="libs/qimessaging/1.0/socket.io.min.js"></script>    
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var app;
+        function submitIP(){
+            var IP = document.getElementById('IP').value
+            app = application(IP)
+        }
+    </script>
+
+    <div id="DisplayLabel" style="display:none; text-align:center">Connected</div>
+
+    <form method="post" onsubmit="return false;" autocomplete="on" id="IPentry" style:"display:table">
+        <h4 style="text-align:center;">Please enter the IP Address of the robot below</h4>
+        <input type="text" id="IP" placeholder="IP Address" tabindex="1" required autofocus>
+        <input style="float: right;" type="submit" onclick="submitIP()">
+    </form> 
+
+</body>
+</html>
